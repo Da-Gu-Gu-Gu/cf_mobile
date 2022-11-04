@@ -5,6 +5,7 @@ interface theme {
   white: string;
   red: string;
   black: string;
+  gray: string;
 }
 
 export const theme: theme = {
@@ -14,4 +15,5 @@ export const theme: theme = {
   white: '#ffffff',
   black: '#000000',
   red: '#ff0a54',
+  gray: '#E5E5E5',
 };
