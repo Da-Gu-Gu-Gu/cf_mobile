@@ -31,7 +31,7 @@ const Title = () => {
   return <Text style={styles.title}>Discover</Text>;
 };
 
-const index = () => {
+const Home = () => {
   return (
     <View style={styles.flex}>
       <StatusBar backgroundColor={theme.primary} />
@@ -53,7 +53,7 @@ const index = () => {
       {/* body */}
       <View style={styles.margin}>
         <FlatList
-          data={[1, 2, 3, 4, 5, 6, 7, 8]}
+          data={[1, 2, 3, 4, 5, 6, 7, 8, 9]}
           numColumns={2}
           showsVerticalScrollIndicator={false}
           ListHeaderComponent={() => <View style={styles.gap} />}
@@ -67,7 +67,7 @@ const index = () => {
   );
 };
 
-export default index;
+export default Home;
 
 const styles = StyleSheet.create({
   flex: {

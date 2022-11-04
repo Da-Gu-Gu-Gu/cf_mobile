@@ -2,17 +2,18 @@ import {StyleSheet, View, TouchableOpacity, ViewStyle} from 'react-native';
 import React from 'react';
 import {theme} from '../utils/theme';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+// import {useNavigation} from '@react-navigation/native';
 
 interface Props {
   LeftEle?: () => JSX.Element | undefined;
-  RightEle: () => JSX.Element | undefined;
+  RightEle?: () => JSX.Element | undefined;
   customStyle?: ViewStyle;
 }
 
 const defaultLeftEle = () => {
   //   const navigation = useNavigation();
   return (
-    <TouchableOpacity onPress={() => console.log('back')}>
+    <TouchableOpacity onPress={() => console.log('goback')}>
       <View style={styles.iconWrapper}>
         <Icon name="arrow-left" size={23} color={theme.black} />
       </View>
