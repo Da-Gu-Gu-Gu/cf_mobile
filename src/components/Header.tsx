@@ -2,7 +2,7 @@ import {StyleSheet, View, TouchableOpacity, ViewStyle} from 'react-native';
 import React from 'react';
 import {theme} from '../utils/theme';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
-// import {useNavigation} from '@react-navigation/native';
+import {useNavigation} from '@react-navigation/native';
 
 interface Props {
   LeftEle?: () => JSX.Element | undefined;
@@ -11,9 +11,9 @@ interface Props {
 }
 
 const defaultLeftEle = () => {
-  //   const navigation = useNavigation();
+  const navigation = useNavigation();
   return (
-    <TouchableOpacity onPress={() => console.log('goback')}>
+    <TouchableOpacity onPress={() => navigation.goBack()}>
       <View style={styles.iconWrapper}>
         <Icon name="arrow-left" size={23} color={theme.black} />
       </View>

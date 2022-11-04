@@ -13,12 +13,14 @@ import {theme} from '../../utils/theme';
 import Header from '../../components/Header';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import Card from './Card';
+import {useNavigation} from '@react-navigation/native';
 
 const RightEle = () => {
+  const navigation = useNavigation();
   return (
     <TouchableOpacity
       style={styles.iconWrapper}
-      onPress={() => console.log('right')}>
+      onPress={() => navigation.navigate('Noti')}>
       <Image
         source={{uri: 'https://api.multiavatar.com/Starcrasher.png'}}
         style={styles.img}

@@ -5,6 +5,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Home from '../screens/Home';
 import CrushList from '../screens/CrushList';
 import Messenger from '../screens/Messenger';
+import Noti from '../screens/Noti';
 
 const Stack = createNativeStackNavigator();
 const Tab = createBottomTabNavigator();
@@ -26,6 +27,7 @@ const index = () => {
         <Stack.Screen name="Home" component={TabNavigator} />
         <Stack.Screen name="Crushlist" component={TabNavigator} />
         <Stack.Screen name="Messenger" component={TabNavigator} />
+        <Stack.Screen name="Noti" component={Noti} />
       </Stack.Navigator>
     </NavigationContainer>
   );
