@@ -3,7 +3,7 @@ import React from 'react';
 import {theme} from '../../utils/theme';
 import CrushItem from './CrushItem';
 
-const CrushList = () => {
+const CrushList = () => { 
   return (
     <View style={styles.wrapper}>
       {/* <Header /> */}
@@ -12,8 +12,8 @@ const CrushList = () => {
         <Text style={styles.listCount}>3/5</Text>
       </View>
       <View style={styles.listWrap}>
-        {[1, 2, 3, 4, 5].map(() => {
-          return <CrushItem />;
+        {[1, 2, 3, 4, 5].map((_,i) => {
+          return <CrushItem key={i} />;
         })}
       </View>
     </View>
@@ -27,7 +27,7 @@ const styles = StyleSheet.create({
     flex: 1,
     paddingHorizontal: 15,
     backgroundColor: theme.white,
-    paddingTop: 40,
+    paddingTop: 30,
   },
   titleWrap: {
     flexDirection: 'row',
