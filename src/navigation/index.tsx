@@ -7,16 +7,37 @@ import CrushList from '../screens/CrushList';
 import Messenger from '../screens/Messenger';
 import Noti from '../screens/Noti';
 import {StackParams} from './types/router';
+import Icon from 'react-native-vector-icons/MaterialCommunityIcons'
 
 const Stack = createNativeStackNavigator<StackParams>();
 const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {
   return (
-    <Tab.Navigator screenOptions={{headerShown: false}}>
-      <Tab.Screen name="Home Screen" component={Home} />
-      <Tab.Screen name="Crush List Screen" component={CrushList} />
-      <Tab.Screen name="Messenger" component={Messenger} />
+    <Tab.Navigator screenOptions={{headerShown: false,tabBarShowLabel:false,tabBarStyle:{
+      height:60
+    }}}>
+      <Tab.Screen name="Home Screen" component={Home} 
+        options={{
+          tabBarIcon:({color,size})=>{
+            return <Icon name='home-outline' size={30} color={color} />
+          }
+        }}
+      />
+      <Tab.Screen name="Crush List Screen" component={CrushList} 
+             options={{
+              tabBarIcon:({color,size})=>{
+                return <Icon name='heart-half-outline' size={30} color={color} />
+              }
+            }}
+      
+      />
+      <Tab.Screen name="Match Screen" component={Messenger} 
+            options={{
+              tabBarIcon:({color,size})=>{
+                return <Icon name='heart-outline' size={30} color={color}/>
+              }
+            }}/>
     </Tab.Navigator>
   );
 };

@@ -11,6 +11,7 @@ interface Props {
 }
 
 const defaultLeftEle = () => {
+  // eslint-disable-next-line react-hooks/rules-of-hooks
   const navigation = useNavigation<any>();
   return (
     <TouchableOpacity onPress={() => navigation.goBack()}>

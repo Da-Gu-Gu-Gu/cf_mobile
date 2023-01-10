@@ -48,7 +48,7 @@ const styles = StyleSheet.create({
   },
   name: {
     fontSize: 15,
-    fontWeight: '700',
+    fontFamily: 'Inter-SemiBold',
     marginHorizontal: 10,
     color: theme.white,
     flex: 1,
