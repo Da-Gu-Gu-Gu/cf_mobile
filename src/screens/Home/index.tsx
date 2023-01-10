@@ -5,16 +5,16 @@ import {
   TouchableOpacity,
   Image,
   StyleSheet,
-  TextInput,
   FlatList,
 } from 'react-native';
 import React from 'react';
 import {theme} from '../../utils/theme';
 import Header from '../../components/Header';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+
 import Card from './Card';
 import {useNavigation} from '@react-navigation/native';
 import {NotiScreenProps} from '../../navigation/types/router';
+import InputIcon from '../../components/InputIcon';
 
 const RightEle = () => {
   const navigation = useNavigation<NotiScreenProps>();
@@ -38,20 +38,14 @@ const Home = () => {
   return (
     <View style={styles.flex}>
       <StatusBar backgroundColor={theme.primary} />
+
       <Header
         LeftEle={() => <Title />}
         RightEle={() => <RightEle />}
         customStyle={{height: 90}}
       />
       {/* search */}
-      <View style={styles.searchWrapper}>
-        <TouchableOpacity style={styles.searchIconWrapper}>
-          <Icon name="search" size={24} color={theme.white} />
-        </TouchableOpacity>
-        <View style={styles.searchInput}>
-          <TextInput placeholder="Search" />
-        </View>
-      </View>
+      <InputIcon icon="search" inputProps={{placeholder: 'Search'}} />
 
       {/* body */}
       <View style={styles.margin}>
@@ -102,27 +96,6 @@ const styles = StyleSheet.create({
   img: {
     width: 30,
     height: 30,
-  },
-  searchWrapper: {
-    flexDirection: 'row',
-    marginVertical: 20,
-    marginHorizontal: 15,
-    borderRadius: 3,
-    height: 44,
-    backgroundColor: theme.primaryLight,
-  },
-  searchIconWrapper: {
-    width: 50,
-    height: 44,
-    borderRadius: 3,
-    alignItems: 'center',
-    justifyContent: 'center',
-    backgroundColor: theme.primary,
-  },
-  searchInput: {
-    flexGrow: 1,
-    paddingLeft: 10,
-    backgroundColor: theme.gray,
   },
   gap: {
     height: 20,
