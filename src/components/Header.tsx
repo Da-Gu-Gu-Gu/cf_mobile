@@ -11,7 +11,7 @@ interface Props {
 }
 
 const defaultLeftEle = () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<any>();
   return (
     <TouchableOpacity onPress={() => navigation.goBack()}>
       <View style={styles.iconWrapper}>

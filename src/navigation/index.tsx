@@ -6,8 +6,9 @@ import Home from '../screens/Home';
 import CrushList from '../screens/CrushList';
 import Messenger from '../screens/Messenger';
 import Noti from '../screens/Noti';
+import {StackParams} from './types/router';
 
-const Stack = createNativeStackNavigator();
+const Stack = createNativeStackNavigator<StackParams>();
 const Tab = createBottomTabNavigator();
 
 const TabNavigator = () => {

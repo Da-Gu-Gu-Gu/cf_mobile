@@ -14,9 +14,10 @@ import Header from '../../components/Header';
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import Card from './Card';
 import {useNavigation} from '@react-navigation/native';
+import {NotiScreenProps} from '../../navigation/types/router';
 
 const RightEle = () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<NotiScreenProps>();
   return (
     <TouchableOpacity
       style={styles.iconWrapper}
