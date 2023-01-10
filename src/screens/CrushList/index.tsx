@@ -1,7 +1,7 @@
 import {View, Text, StyleSheet} from 'react-native';
 import React from 'react';
-// import Header from '../../components/Header';
 import {theme} from '../../utils/theme';
+import CrushItem from './CrushItem';
 
 const CrushList = () => {
   return (
@@ -12,9 +12,9 @@ const CrushList = () => {
         <Text style={styles.listCount}>3/5</Text>
       </View>
       <View style={styles.listWrap}>
-        <View style={styles.row}>
-          <Text>AA</Text>
-        </View>
+        {[1, 2, 3, 4, 5].map(() => {
+          return <CrushItem />;
+        })}
       </View>
     </View>
   );
@@ -47,6 +47,7 @@ const styles = StyleSheet.create({
   },
   listWrap: {
     padding: 20,
+    // paddingBottom: 0,
     borderRadius: 5,
     marginTop: 30,
     shadowColor: theme.black,
@@ -57,10 +58,7 @@ const styles = StyleSheet.create({
     },
     shadowOpacity: 0.32,
     shadowRadius: 5.46,
-    height: 400,
+    // height: 400,
     elevation: 9,
-  },
-  row: {
-    flexDirection: 'row',
   },
 });
