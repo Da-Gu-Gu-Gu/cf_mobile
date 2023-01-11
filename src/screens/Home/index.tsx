@@ -13,15 +13,15 @@ import Header from '../../components/Header';
 
 import Card from './Card';
 import {useNavigation} from '@react-navigation/native';
-import {NotiScreenProps} from '../../navigation/types/router';
+import {ProfileScreenProps} from '../../navigation/types/router';
 import InputIcon from '../../components/InputIcon';
 
 const RightEle = () => {
-  const navigation = useNavigation<NotiScreenProps>();
+  const navigation = useNavigation<ProfileScreenProps>();
   return (
     <TouchableOpacity
       style={styles.iconWrapper}
-      onPress={() => navigation.navigate('Noti')}>
+      onPress={() => navigation.navigate('Profile')}>
       <Image
         source={{uri: 'https://api.multiavatar.com/Starcrasher.png'}}
         style={styles.img}

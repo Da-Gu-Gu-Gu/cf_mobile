@@ -5,16 +5,16 @@ import {NativeStackNavigationProp as StackProp} from '@react-navigation/native-s
 export type StackParams = {
   Home: undefined;
   Crushlist: undefined;
-  Messenger: undefined;
-  Noti: undefined;
+  Match: undefined;
+  Profile: undefined;
 };
 
 export type HomeScreenProps = StackProp<StackParams, 'Home'>;
 export type CrushListScreenProps = StackProp<StackParams, 'Crushlist'>;
-export type MessengerScreenProps = StackProp<StackParams, 'Messenger'>;
-export type NotiScreenProps = StackProp<StackParams, 'Noti'>;
+export type MatchScreenProps = StackProp<StackParams, 'Match'>;
+export type ProfileScreenProps = StackProp<StackParams, 'Profile'>;
 
 export type HomeRouteProp = RouteProp<StackParams, 'Home'>;
 export type CrushListRouteProp = RouteProp<StackParams, 'Crushlist'>;
-export type MessengerRouteProp = RouteProp<StackParams, 'Messenger'>;
-export type NotiRouteProp = RouteProp<StackParams, 'Noti'>;
+export type MatchRouteProp = RouteProp<StackParams, 'Match'>;
+export type ProfileRouteProp = RouteProp<StackParams, 'Profile'>;

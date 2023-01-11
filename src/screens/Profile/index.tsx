@@ -2,13 +2,13 @@ import React from 'react';
 import {Text, View} from 'react-native';
 import Header from '../../components/Header';
 
-const Noti = () => {
+const Profile = () => {
   return (
     <View>
       <Header />
-      <Text>Notification Screen</Text>
+      <Text>Profile Screen</Text>
     </View>
   );
 };
 
-export default Noti;
+export default Profile;

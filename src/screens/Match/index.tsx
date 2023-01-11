@@ -1,12 +1,12 @@
 import {View, Text} from 'react-native';
 import React from 'react';
 
-const Messenger = () => {
+const Match = () => {
   return (
     <View>
-      <Text>Messenger</Text>
+      <Text>Match</Text>
     </View>
   );
 };
 
-export default Messenger;
+export default Match;
