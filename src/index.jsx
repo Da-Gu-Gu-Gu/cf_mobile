@@ -7,7 +7,7 @@ import {theme} from './utils/theme';
 
 const App = () => {
   // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [isAuth, setIsAuth] = useState(false);
+  const [isAuth, setIsAuth] = useState(true);
   return (
     <NavigationContainer>
       <StatusBar backgroundColor={theme.primary} />

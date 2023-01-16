@@ -1,14 +1,22 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {StyleSheet, Text, View} from 'react-native';
 import Header from '../../components/Header';
 
 const Profile = () => {
   return (
     <View>
       <Header />
-      <Text>Profile Screen</Text>
+      <View style={styles.wrapper}>
+        <Text>Profile Screen</Text>
+      </View>
     </View>
   );
 };
 
 export default Profile;
+
+const styles = StyleSheet.create({
+  wrapper: {
+    paddingHorizontal: 20,
+  },
+});
