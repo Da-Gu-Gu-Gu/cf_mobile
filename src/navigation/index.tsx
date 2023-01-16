@@ -8,6 +8,7 @@ import Match from '../screens/Match';
 import Profile from '../screens/Profile';
 import {StackParams} from './types/router';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import Login from '../screens/Login';
 
 const Stack = createNativeStackNavigator<StackParams>();
 const Tab = createBottomTabNavigator();
@@ -53,7 +54,7 @@ const TabNavigator = () => {
   );
 };
 
-const index = () => {
+const ScreensNavigation = () => {
   return (
     <NavigationContainer>
       <Stack.Navigator screenOptions={{headerShown: false}}>
@@ -66,4 +67,17 @@ const index = () => {
   );
 };
 
-export default index;
+export const LoginNavigation = () => {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator
+        screenOptions={{
+          headerShown: false,
+        }}>
+        <Stack.Screen name="Login" component={Login} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
+};
+
+export default ScreensNavigation;

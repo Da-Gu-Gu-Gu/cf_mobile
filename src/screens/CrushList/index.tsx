@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
     padding: 5,
     borderRadius: 5,
     color: theme.white,
+    fontFamily: 'Inter-SemiBold',
     backgroundColor: theme.primary,
   },
   listWrap: {

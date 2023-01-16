@@ -1,8 +1,7 @@
 import React from 'react';
-import Navigation from './navigation';
-
+import {LoginNavigation} from './navigation';
 const index = () => {
-  return <Navigation />;
+  return <LoginNavigation />;
 };
 
 export default index;
