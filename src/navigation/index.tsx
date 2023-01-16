@@ -1,5 +1,5 @@
 import React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
+
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Home from '../screens/Home';
@@ -54,30 +54,24 @@ const TabNavigator = () => {
   );
 };
 
-const ScreensNavigation = () => {
+export const ScreensNavigation = () => {
   return (
-    <NavigationContainer>
-      <Stack.Navigator screenOptions={{headerShown: false}}>
-        <Stack.Screen name="Home" component={TabNavigator} />
-        <Stack.Screen name="Crushlist" component={TabNavigator} />
-        <Stack.Screen name="Match" component={TabNavigator} />
-        <Stack.Screen name="Profile" component={Profile} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Screen name="Home" component={TabNavigator} />
+      <Stack.Screen name="Crushlist" component={TabNavigator} />
+      <Stack.Screen name="Match" component={TabNavigator} />
+      <Stack.Screen name="Profile" component={Profile} />
+    </Stack.Navigator>
   );
 };
 
 export const LoginNavigation = () => {
   return (
-    <NavigationContainer>
-      <Stack.Navigator
-        screenOptions={{
-          headerShown: false,
-        }}>
-        <Stack.Screen name="Login" component={Login} />
-      </Stack.Navigator>
-    </NavigationContainer>
+    <Stack.Navigator
+      screenOptions={{
+        headerShown: false,
+      }}>
+      <Stack.Screen name="Login" component={Login} />
+    </Stack.Navigator>
   );
 };
-
-export default ScreensNavigation;
